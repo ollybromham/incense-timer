@@ -8,7 +8,7 @@ const timer = document.querySelector('.time');
 
 let burnt = 1;
 let burning = false;
-let length = 550
+let length = window.innerHeight >= 700 ? 550 : 450
 let bpm = 8.5
 let last = length
 let ash = 6
@@ -16,13 +16,6 @@ let finish = false
 let time = 60
 let selecting = true
 
-window.addEventListener('DOMContentLoaded', () => {
-  bpm = length / 60
-
-  incense.style.height = `${length}px`
-  stick.style.height = `${(45+length)}px`
-  slider.style.width = `${(45+length)}px`
-})
 
 function update(ignite, burntime) {
   let now = new Date()
@@ -86,10 +79,11 @@ incense.addEventListener('click', () => {
 })
 
 window.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('main').style.opacity = 1
   bpm = length / 60;
 
   incense.style.height = `${length}px`
   stick.style.height = `${(45+length)}px`
-  slider.style.width = `${(45+length)}px`
+  slider.style.width = `${(35+length)}px`
   slider.style.bottom = `${(length)/2}px`
 })

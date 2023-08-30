@@ -20,6 +20,8 @@ main {
   height: 100dvh;
   width: 100%;
   overflow: hidden;
+  opacity: 0;
+  transition: opacity 2s ease;
 }
 
 input {
@@ -64,6 +66,8 @@ input {
   align-items: center;
   flex-direction: column;
   transition: 0s ease;
+  user-select: none;
+  pointer-events: none;
 }
 
 .stick .base {
@@ -90,6 +94,8 @@ input {
   align-items: center;
   flex-direction: column;
   transition: 0s ease;
+  user-select: auto;
+  pointer-events: visible;
 }
 
 .stick .incense .burn {
@@ -107,7 +113,7 @@ input {
 }
 
 .smoke {
-  position: absolute;
+  position: fixed;
   z-index: 1;
   bottom: 0;
   /* background: rgb(205,205,205); */
