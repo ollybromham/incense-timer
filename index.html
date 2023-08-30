@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Incense Timer</title>
+    <meta name="description" content="Ambiently measure the passing of time" />
+    <meta property="og:title" content="Incese Timer" />
+    <meta property="og:description" content="Ambiently measure the passing of time" />
+    <meta property="og:image" content="https://incensetimer.com/images/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Incense Timer" />
+    <meta name="twitter:description" content="Ambiently measure the passing of time" />
+    <meta name="twitter:image" content="https://incensetimer.com/images/og.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  </head>
+  <body>
+    <main>
+      <input type="range" min="1" max="60" value="60" class="slider">
+      <div class="smoke"></div>
+      <div class="stick">
+        <div class="text">
+          <span class="time">60</span>m
+        </div>
+        <div class="incense">
+            <div class="burn"></div>
+        </div>
+        <div class="base"></div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+    <script async defer src="https://scripts.withcabin.com/hello.js"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "Incense Timer",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "images/512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
