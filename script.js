@@ -82,8 +82,20 @@ window.addEventListener('DOMContentLoaded', () => {
   document.querySelector('main').style.opacity = 1
   bpm = length / 60;
 
+  let addition = /^((?!chrome|android).)*safari/i.test(navigator.userAgent) ? 45 : 0; // isSafari
+
   incense.style.height = `${length}px`
   stick.style.height = `${(45+length)}px`
   slider.style.width = `${(35+length)}px`
-  slider.style.bottom = `${(length)/2}px`
+  slider.style.bottom = `${((length)/2) + addition}px`
 })
+
+// const app = document.querySelector('main')
+
+// app.addEventListener('click', () => {
+//   if (app.style.backgroundColor === "rgb(17, 20, 40)") {
+//     app.style.backgroundColor = "#fff"
+//   } else {
+//     app.style.backgroundColor = "#111428"
+//   }
+// })
