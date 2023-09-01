@@ -33,6 +33,7 @@ function update(ignite, burntime) {
     let current = length * ((burntime-timesince) / (burntime))
     incense.style.height = `${current}px`
     smoke.style.bottom = `${current}px`
+    smoke.style.height = `${(window.innerHeight - current) - 15}px`
     // Ash
     if (Math.floor(last) > Math.floor(current)) { // only if incense decreases by 1px
       if (Math.floor(Math.random() * 10) === 1) {
@@ -56,6 +57,8 @@ slider.oninput = function() {
     time = timer.innerHTML
     incense.style.height = ''+(time*bpm)+'px'
     stick.style.height = `${(45+(time*bpm))}px`
+    smoke.style.height = `${(window.innerHeight - length) - 15}px`
+    smoke.style.bottom = `${length}px`
     length = (time*bpm)
   }
 };
@@ -64,10 +67,13 @@ incense.addEventListener('click', () => {
   selecting = false
   burning = true
 
+  smoke.style.height = `${(window.innerHeight - length) - 15}px`
+  smoke.style.transition = '3s ease'
   text.style.transition = '1s ease'
   text.style.opacity = 0
   burn.style.opacity = 1
   smoke.style.opacity = 1
+  // smoke.style.transition = '1s ease'
 
   let ignite = new Date()
   let burntime = (slider.value * 60)
@@ -88,6 +94,8 @@ window.addEventListener('DOMContentLoaded', () => {
   stick.style.height = `${(45+length)}px`
   slider.style.width = `${(35+length)}px`
   slider.style.bottom = `${((length)/2) + addition}px`
+  smoke.style.height = `${(window.innerHeight - length) - 15}px`
+  smoke.style.bottom = `${length}px`
 })
 
 // const app = document.querySelector('main')
